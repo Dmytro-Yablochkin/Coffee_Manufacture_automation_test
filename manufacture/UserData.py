@@ -1,9 +1,9 @@
 class UserData:
-    user_name = 'Дмитро'
-    user_last_name = 'Яблочкін'
-    user_email = 'Ramennewlife1994@gmail.com'
-    user_password = 'f1605f1994'
-    user_phone_num = '+380632083449'
+    user_name = ''
+    user_last_name = ''
+    user_email = ''
+    user_password = ''
+    user_phone_num = ''
     # ------------- incorrect data------------- #
     bad_email = 'BigDog@gmail.com'
     bad_name = 'awddfgsd'
