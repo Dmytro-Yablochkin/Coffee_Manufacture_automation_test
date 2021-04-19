@@ -37,6 +37,15 @@ class NavigationLocators:
                              '-item-has-children.menu-item-8455 > div > ul > ' \
                              'li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-7598 > a '
 
+    top_sells_block = 'css = #post-212 > div > div.vc_row.wpb_row.vc_row-fluid.producttab.vc_custom_1590763826914' \
+                      '.vc_row-has-fill > div > div > div '
+
+    top_sells_item = 'css = li.post-2491.product.type-product.status-publish.has-post-thumbnail.product_cat-packed' \
+                     '-coffee.product_tag-200-.product_brand-113.instock.sale.featured.shipping-taxable.purchasable' \
+                     '.product-type-simple '
+
+    top_sells_rb = 'css = div > ul > div.owl-controls.clickable > div > div.owl-next'
+    top_sells_lb = 'css = div > ul > div.owl-controls.clickable > div > div.owl-prev'
 
 class NavPageFunctionality:
     # 7. Auto-scroll button
@@ -62,3 +71,14 @@ class NavPageFunctionality:
         sl.maximize_browser_window()
         bi.run_keyword('Mouse over', NavigationLocators.nav_panel_store)
         bi.run_keyword('Wait until element is visible', NavigationLocators.nav_panel_droplist)
+        
+        # 20. Item scroll button Left/Right
+    def top_sells_block_btns(self):
+        sl.maximize_browser_window()
+        bi.run_keyword('Scroll element into view', NavigationLocators.top_sells_block)
+        bi.run_keyword('Mouse over', NavigationLocators.top_sells_item)
+        bi.run_keyword('Wait until element is visible', NavigationLocators.top_sells_rb)
+        bi.run_keyword('Click element', NavigationLocators.top_sells_rb)
+        bi.run_keyword('Wait until element is visible', NavigationLocators.top_sells_lb)
+        bi.run_keyword('Click element', NavigationLocators.top_sells_lb)
+        bi.run_keyword('Wait until page contains element', NavigationLocators.top_sells_item)
