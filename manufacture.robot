@@ -74,5 +74,8 @@ ${MAIN_PAGE_URL}    https://manufacture.coffee/
     Click Instagram link
 
 #OTHER CART FUNCTIONALITY
-20. Saving shopping cart information functionality
+20. Item scroll button Left/Right
+    Top sells block btns
+
+21. Saving shopping cart information functionality
     Create and refresh
